@@ -21,6 +21,7 @@ A complete checklist to build, deploy, and monetize micro-tool websites using AI
 ## Step 2: Keyword Research with Ahrefs
 
 - [ ] Go to [Ahrefs Free Keyword Generator](https://ahrefs.com/keyword-generator)
+- [ ] Use [Ahrefs Traffic Checker](https://ahrefs.com/traffic-checker) to spy on competitor traffic numbers
 - [ ] Enter your main keyword — check monthly search volume (even 1,000 US searches is enough)
 - [ ] Go to **Questions tab** → copy all FAQs (these become your FAQ section)
 - [ ] Check **Related terms tab** for supporting keywords
