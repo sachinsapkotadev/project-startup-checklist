@@ -1,99 +1,141 @@
-# Micro-Tool Website Builder — Earn with AI
+# Project Startup Checklist
 
 **Last Updated:** September 2, 2026
 
-A complete checklist to build, deploy, and monetize micro-tool websites using AI.
+A complete, step-by-step checklist for starting, building, testing, securing, and deploying software projects with AI coding tools. Never forget a single setup step again.
 
-**The model:** Build one small, focused web tool per month → rank on Google → earn passive income via Google AdSense. Cost: ~₹1,000/year (domain only). Hosting is free on Cloudflare.
-
----
-
-## 2 Ideas to Earn Money with AI
-
-### Idea 1: Micro-Tool Website Business
-
-Build small, single-page utility websites (online ruler, word counter, color picker, font finder, percentage calculator) that solve one specific problem. Rank them on Google through SEO, then monetize with Google AdSense.
-
-**How it works:**
-- Build one tool per month using AI (Claude Code + AstroJS)
-- Each tool costs ~₹1,000/year (domain only), hosting is free on Cloudflare
-- SEO drives free organic traffic from Google
-- Google AdSense places ads on your site — you earn from every visitor who sees or clicks an ad
-- Target US traffic for higher CPM rates (US users = higher advertiser spend = more revenue)
-
-**Earning potential:**
-| Timeline | What Happens |
-|----------|-------------|
-| Month 1–3 | Site live, Google crawling, rankings low. Keep building more tools. |
-| Month 4–6 | Rankings climb if SEO is solid. First meaningful traffic. |
-| Month 6+ | 10+ daily users → apply for AdSense. First earnings appear. |
-| Year 1 | 12 tools live, 1–3 driving organic traffic. ₹10K–₹50K/month per tool. |
-| Year 2 | 24 tools. Compounding effect. ₹1–4 lakh/month is achievable. |
-
-**Even if none go viral:** You still have 12 live, deployed applications with real users — an extraordinary portfolio that lands jobs.
+**Use case:** You open OpenCode, drop your project idea, and follow the checklist from idea to production — no missed steps, no forgotten config, no "oh wait, I forgot env vars."
 
 ---
 
-### Idea 2: Multi-Language Website Domination
+## The Workflow
 
-Take your English micro-tool website and convert it into multiple languages to rank in different countries. A single tool can now target users in Brazil, Japan, France, Germany, Korea, Italy, and Spanish-speaking countries — multiplying your traffic and AdSense revenue without building new tools.
-
-**How it works:**
-- Use AstroJS i18n to add multi-language support
-- Convert full website content to target language (not just /lang pages)
-- Add hreflang markup for each language
-- Target local keywords in each language
-- One tool, 7+ languages, 7x the potential traffic
-
-**Earning potential:** Same tool that earns ₹30K/month in English can earn ₹1–2 lakh/month when properly localized for 7 languages with proper SEO.
+```
+PROJECT IDEA
+    ↓
+Planning
+    ↓
+Tech Stack
+    ↓
+AI Skills
+    ↓
+MCP Servers
+    ↓
+LSPs
+    ↓
+Plugins
+    ↓
+Project Initialization
+    ↓
+Dependencies
+    ↓
+Git + GitHub
+    ↓
+Environment Variables
+    ↓
+UI/UX
+    ↓
+Development
+    ↓
+Testing
+    ↓
+Security
+    ↓
+SEO
+    ↓
+Performance
+    ↓
+Production Build
+    ↓
+Deployment
+    ↓
+Domain + DNS + SSL
+    ↓
+Analytics
+    ↓
+Final QA
+    ↓
+Launch
+    ↓
+Maintenance
+```
 
 ---
 
 ## Quick Start
 
-| Guide | Description |
-|-------|-------------|
-| [Guide 1 — Step by Step](#step-1-find-a-problem-worth-solving) | 12-step checklist from idea to AdSense earnings |
-| [Guide 2 — Full Guide](Guide%202.md) | Complete guide with all prompts, video links, and templates |
+| Guide | What It Covers |
+|-------|----------------|
+| [Guide 1 — Step by Step](Guide%201.md) | Full checklist from idea to launch, 22 phases with checkboxes |
+| [Guide 2 — Prompts & Resources](Guide%202.md) | Prompt templates, tool links, AI skill installs, MCP configs |
 
 ---
 
-## The 12-Step Process
+## Why This Exists
 
-1. **Find a problem** — small, real-world, low competition
-2. **Keyword research** — validate with Ahrefs, check search volume
-3. **Choose domain** — .com with primary keyword, no hyphens
-4. **Setup dev env** — Git, VS Code, Node.js, AI coding tool
-5. **Build with AI** — AstroJS + Claude Code + design skills
-6. **On-page SEO** — title, meta, OG tags, 800–1200 word content
-7. **FAQ section** — JSON-LD structured data for rich results
-8. **AdSense pages** — Privacy Policy, Terms, About, Contact
-9. **Deploy** — Cloudflare Pages (static) or Workers (dynamic)
-10. **Connect domain** — buy .com, setup Cloudflare DNS
-11. **Submit to search engines** — Google Search Console + Bing
-12. **Apply for AdSense** — 10+ daily users, then monetize
+- **AI coding tools are fast but chaotic** — Claude Code, Cursor, Gemini CLI, OpenCode all ship features fast, but they don't remind you to set up env vars, configure DNS, or add security headers
+- **This checklist fills the gap** — it's the thing you keep open while you build, so nothing slips through
+- **Works with any stack** — not tied to one framework. Astro, Next.js, React, Django, Go, Rust — the checklist adapts
+- **Works with any AI tool** — OpenCode, Claude Code, Cursor, Copilot, Windsurf — the prompts are portable
 
 ---
 
-## Why This Works
+## What Each Phase Covers
 
-- **Zero marginal cost** — build once, earn forever
-- **Free hosting** — Cloudflare Pages (100K pageviews/day free tier)
-- **AI does the coding** — no programming skills needed
-- **SEO compounds** — tools keep ranking and earning while you sleep
-- **Portfolio bonus** — even if tools don't viral, you get 12 deployed projects for job interviews
+| Phase | What You Do | Why It Matters |
+|-------|-------------|----------------|
+| **Project Idea** | Validate the idea, find competitors, define scope | Build something people actually want |
+| **Planning** | Break into features, pick architecture, set milestones | Avoid scope creep and endless "just one more thing" |
+| **Tech Stack** | Choose language, framework, database, hosting | Every later decision depends on this |
+| **AI Skills** | Install agent skills for your stack (design, docs, patterns) | AI writes better code when it has context |
+| **MCP Servers** | Add Model Context Protocol servers for framework docs | AI gets real-time access to official documentation |
+| **LSPs** | Set up Language Server Protocol for your language | Autocomplete, error detection, refactoring |
+| **Plugins** | Editor plugins, linters, formatters, dev tools | Catch bugs early, enforce consistency |
+| **Project Init** | Scaffold the project, initialize Git, set up structure | Clean foundation, no "we'll fix it later" tech debt |
+| **Dependencies** | Install packages, lock versions, audit for vulnerabilities | Reproducible builds, no surprise breakages |
+| **Git + GitHub** | Branch strategy, .gitignore, README, LICENSE, CI/CD | Collaboration ready from day one |
+| **Env Variables** | .env files, secrets management, config per environment | Never hardcode secrets, never leak API keys |
+| **UI/UX** | Design system, component library, responsive layout | Users judge your app in 3 seconds |
+| **Development** | Build features, iterate, review code | The actual work |
+| **Testing** | Unit, integration, E2E, accessibility | Ship with confidence, not hope |
+| **Security** | Headers, auth, input validation, dependency audit | One vulnerability can tank the whole project |
+| **SEO** | Meta tags, sitemap, structured data, performance | Get found without paying for ads |
+| **Performance** | Core Web Vitals, lazy loading, caching, bundle size | Speed is a feature |
+| **Production Build** | Optimize, minify, tree-shake, preview | What users get is what you tested |
+| **Deployment** | CI/CD pipeline, staging, production deploy | Automated, repeatable, boring |
+| **Domain + DNS + SSL** | Buy domain, configure DNS, enable HTTPS | Your project lives at a real address |
+| **Analytics** | Tracking, error monitoring, uptime | Know what's happening without guessing |
+| **Final QA** | Cross-browser, mobile, accessibility, smoke test | Last gate before users see it |
+| **Launch** | Soft launch, monitor, announce | Ship it |
+| **Maintenance** | Updates, backups, monitoring, iteration | Keep it alive |
 
 ---
 
-## Resources
+## Who This Is For
 
-- [Ahrefs Keyword Generator](https://ahrefs.com/keyword-generator)
-- [Ahrefs Traffic Checker](https://ahrefs.com/traffic-checker)
-- [Instant Domain Search](https://instantdomainsearch.com)
-- [Vercel design.md](https://getdesign.md/vercel/design-md)
-- [AstroJS Docs](https://docs.astro.build/en/getting-started/)
-- [AstroJS i18n Recipe](https://docs.astro.build/en/recipes/i18n/)
-- [Cloudflare Dashboard](https://dash.cloudflare.com/login)
-- [Google Search Console](https://search.google.com/search-console/about)
-- [Google AdSense](https://adsense.google.com/start/)
-- [CompileFuture Blog](https://compilefuture.com/blog/making-50-lpa-from-my-own-ai-business/)
+- Solo developers using AI coding tools who want a systematic workflow
+- Teams onboarding new projects who need a shared checklist
+- Anyone who's ever deployed something and realized they forgot to set up environment variables
+
+---
+
+## Stack Agnostic
+
+This checklist works with:
+
+- **Frameworks:** Astro, Next.js, Nuxt, SvelteKit, Remix, Django, Flask, FastAPI, Rails, Go, Rust, Swift
+- **AI Tools:** OpenCode, Claude Code, Cursor, GitHub Copilot, Windsurf, Gemini CLI
+- **Hosting:** Vercel, Cloudflare Pages/Workers, Netlify, AWS, GCP, Azure, Railway, Fly.io
+- **Databases:** PostgreSQL, MySQL, SQLite, MongoDB, Redis, Supabase, Neon, PlanetScale
+
+---
+
+## Contributing
+
+PRs welcome. If you've found a step that's missing or a tool that should be listed, open an issue or submit a PR.
+
+---
+
+## License
+
+MIT
