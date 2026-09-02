@@ -252,6 +252,7 @@ https://yoursite.pages.dev/*
 ## Resources
 
 - [Ahrefs Keyword Generator](https://ahrefs.com/keyword-generator)
+- [Ahrefs Traffic Checker](https://ahrefs.com/traffic-checker)
 - [Instant Domain Search](https://instantdomainsearch.com)
 - [Vercel design.md](https://getdesign.md/vercel/design-md)
 - [Web Design Guidelines Skill](https://www.skills.sh/vercel-labs/agent-skills/web-design-guidelines)
