@@ -21,10 +21,8 @@ AstroJS is now installed in your project root.
 Vercel publishes a design system document that trains AI agents to produce clean, professional UI.
 
 ```bash
-npx shadcn@latest init
+npx getdesign@latest add vercel
 ```
-
-Or search "Vercel design.md" on Google and follow the install command in the description.
 
 This single file dramatically improves the visual quality of AI-generated websites.
 
@@ -37,13 +35,13 @@ Claude Code supports "skills" — specialized knowledge packs that guide the AI.
 ### Web Design Guidelines (consistent, professional UI):
 
 ```bash
-claude mcp add web-design-guidelines
+npx skills add https://github.com/vercel-labs/agent-skills --skill web-design-guidelines
 ```
 
 ### Tailwind 4 Docs (fixes Tailwind v4 knowledge gaps):
 
 ```bash
-claude mcp add tailwind-v4-docs
+npx skills add https://github.com/lombiq/tailwind-agent-skills --skill tailwind-4-docs
 ```
 
 ---
