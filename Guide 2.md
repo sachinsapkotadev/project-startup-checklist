@@ -1,527 +1,557 @@
-# Micro-Tool Website Builder — Complete Guide
+# Project Startup Checklist — Prompts & Resources
 
 **Last Updated:** September 2, 2026
 
-A complete checklist to build, deploy, and monetize micro-tool websites using AI.
-
-**The model:** Build one small, focused web tool per month → rank on Google → earn passive income via Google AdSense. Cost: ~₹1,000/year (domain only). Hosting is free on Cloudflare.
-
-> Affiliate disclosure: Some links below are affiliate links. If you buy through them I earn a small commission at no extra cost to you — it helps me keep making free videos.
+Copy-paste prompt templates, essential tool links, and quick reference for every phase.
 
 ---
 
-## Must Watch Videos
+## Prompt Templates
 
-| Topic | MacOS | Windows |
-|-------|-------|---------|
-| Installing Git | [MacOS](https://tothe.app/JjR7GHy) | [Windows](https://tothe.app/QqAHA29) |
-| Installing NodeJS | [MacOS](https://tothe.app/bfUq5kQ) | [Windows](https://tothe.app/ginvdkk) |
-| Installing VS Code | [MacOS](https://tothe.app/alsATnI) | [Windows](https://tothe.app/KxjAunQ) |
+### Idea Validation
 
-| Topic | Link |
-|-------|------|
-| How to Code with AI for FREE | [Watch](https://tothe.app/NzMc7pu) |
-| How to use Claude Code | [Watch](https://tothe.app/kjob1WE) |
-| Full 3Hr+ Video Tutorial | [Watch](https://compilefuture.com/blog/making-50-lpa-from-my-own-ai-business/) |
+```
+I want to build [one-sentence description].
+My target users are [who].
+Existing solutions: [list 3–5 competitors].
+
+What am I missing? What's the MVP? What should I cut?
+What's the smallest version that proves this works?
+```
+
+### Tech Stack Recommendation
+
+```
+Given this project [description], recommend a tech stack.
+Constraints:
+- Must work with [AI tool: OpenCode / Claude Code / Cursor]
+- Hosting budget: [free / $X per month]
+- Team size: [solo / small team]
+- Target scale: [hobby / startup / enterprise]
+
+Give me specific tools, not just categories. Explain why each pick.
+```
+
+### Architecture Planning
+
+```
+Design the architecture for [project description].
+Tech stack: [list]
+Requirements:
+- [requirement 1]
+- [requirement 2]
+- [requirement 3]
+
+Give me:
+1. Folder structure
+2. Data model (entities and relationships)
+3. API routes if applicable
+4. Component hierarchy if frontend
+5. Key architectural decisions and why
+```
+
+### Project Scaffolding
+
+```
+Initialize a new [framework] project in this directory.
+Set up:
+- [Framework] with [template: basic / minimal / full]
+- [CSS framework] configured
+- [Linting and formatting]
+- [Testing framework]
+- Git initialized with .gitignore
+- README.md with setup instructions
+
+Run the dev server and confirm it works.
+```
+
+### Feature Building
+
+```
+Build [feature name].
+
+Spec:
+- [what it does]
+- [input/output]
+- [edge cases to handle]
+
+Architecture:
+- Use [pattern: component / API route / utility function]
+- Follow existing code patterns in the project
+- [specific constraints]
+
+Write the code, add error handling, and write tests for critical paths.
+```
+
+### Code Review
+
+```
+Review the code in [file / directory / recent changes].
+
+Check for:
+- Bugs and logic errors
+- Security vulnerabilities
+- Performance issues
+- Code style consistency with the rest of the project
+- Missing error handling
+- Missing edge cases
+
+Give me specific fixes, not just warnings.
+```
+
+### Testing
+
+```
+Write tests for [function / component / API endpoint].
+
+Cover:
+- Happy path (normal input, expected output)
+- Edge cases: empty input, null, max values, special characters, unicode
+- Error cases: invalid input, network failure, unauthorized access
+- Boundary conditions
+
+Use [test framework]. Follow the patterns in existing test files.
+Aim for high coverage on critical business logic.
+```
+
+### Security Audit
+
+```
+Audit this project for security vulnerabilities.
+
+Check:
+- Security headers (CSP, HSTS, X-Frame-Options, X-Content-Type-Options)
+- Input validation and sanitization (server-side)
+- SQL injection / NoSQL injection vectors
+- XSS vectors (stored, reflected, DOM-based)
+- Authentication and authorization gaps
+- Hardcoded secrets or API keys in source code
+- Dependency vulnerabilities (npm audit, pip audit, etc.)
+- CORS configuration
+- Rate limiting on sensitive endpoints
+- File upload validation
+
+Give me a prioritized list: Critical → High → Medium → Low.
+Include specific code fixes for each issue.
+```
+
+### SEO Optimization
+
+```
+Do on-page SEO for [page URL or description].
+
+Main keyword: [keyword]
+Supporting keywords: [list]
+
+Generate:
+1. Title tag (under 60 characters, primary keyword near start)
+2. Meta description (under 160 characters, compelling, includes keyword)
+3. Open Graph tags (og:title, og:description, og:image, og:url, og:type)
+4. Twitter Card tags
+5. Canonical URL
+6. JSON-LD structured data for [type: Article / Product / FAQ / HowTo]
+7. 800–1200 words of relevant, natural content incorporating keywords
+8. Internal link suggestions to other pages on the site
+```
+
+### Performance Optimization
+
+```
+Optimize this [framework] app for performance.
+
+Current state:
+- [describe current issues or metrics if known]
+
+Check and fix:
+- Bundle size (tree shaking, code splitting, dynamic imports)
+- Image optimization (compression, formats, lazy loading)
+- Caching headers and strategies
+- Third-party script impact
+- Critical rendering path
+- Core Web Vitals (LCP, INP, CLS)
+
+Give me a prioritized list with expected impact.
+```
+
+### Deployment
+
+```
+Deploy this [framework] app to [platform].
+
+Steps:
+1. Build the project for production
+2. Configure the deployment (build command, output directory)
+3. Set up environment variables
+4. Deploy to staging first, then production
+5. Add the deploy script to package.json
+6. Set up automatic deployment on push to main
+7. Configure preview deployments for PRs
+
+Verify the deployment works and report the live URL.
+```
+
+### Domain & DNS Setup
+
+```
+My app is deployed at [current URL].
+I bought [domain.com] from [registrar].
+
+Walk me through:
+1. Adding the domain to [hosting platform]
+2. Configuring DNS records (A, CNAME, MX, TXT)
+3. Updating nameservers at the registrar
+4. Verifying SSL is active
+5. Setting up www redirect
+6. Disabling indexing on the staging/preview URL
+7. Submitting to Google Search Console
+
+Give me exact steps with the specific values to use.
+```
 
 ---
 
-## CompileFuture Website Checklist
+## Essential Tools
 
-- [ ] Create website with Prompt (give competitor url)
-- [ ] Use [logofa.st](https://logofa.st/) for the logo & favicon
-- [ ] Add Favicon (use real favicon generator)
-- [ ] Website should be mobile responsive
-- [ ] Do SEO with prompt (write about the tool 800–1200 words)
-- [ ] Add FAQ section
-- [ ] Add privacy policy, about us, terms & conditions, contact us pages
-- [ ] Add error pages (404, 500)
-- [ ] robots.txt
-- [ ] sitemap.xml
-- [ ] Add Google Analytics code
-- [ ] Add `_headers` file for Cloudflare Pages / if using Workers then disable workers.dev domains after connecting the .com domain
-- [ ] Add mail routing in Cloudflare for getting emails in your Gmail
+### Keyword Research & SEO
 
----
+| Tool | URL | Purpose |
+|------|-----|---------|
+| Ahrefs Free Keyword Generator | https://ahrefs.com/keyword-generator | Keyword research, search volume |
+| Ahrefs Traffic Checker | https://ahrefs.com/traffic-checker | Competitor traffic analysis |
+| Google Search Console | https://search.google.com/search-console | Submit sitemap, monitor indexing |
+| Bing Webmaster Tools | https://www.bing.com/webmasters | Submit to Bing |
+| Google Trends | https://trends.google.com | Trend analysis |
 
-## Step 1: Find a Problem Worth Solving
+### Domain & Hosting
 
-- [ ] Find a small, real-world problem that can be solved with a single-page web tool
-- [ ] Check Google — if page 4 shows a government site or Quora thread, you've found a low-competition gold mine
-- [ ] Note weaknesses in existing tools for that keyword
-- [ ] Use AI to brainstorm: *"What are small everyday problems people face that could be solved with a simple web tool?"*
-- [ ] Check Reddit, Quora for complaints in relevant subreddits
+| Tool | URL | Purpose |
+|------|-----|---------|
+| Instant Domain Search | https://instantdomainsearch.com | Find available domains |
+| Cloudflare | https://dash.cloudflare.com | DNS, CDN, Pages, Workers |
+| Vercel | https://vercel.com | Hosting, edge functions |
+| Netlify | https://netlify.com | Hosting, serverless functions |
+| Railway | https://railway.app | App hosting with databases |
+| Fly.io | https://fly.io | Global app deployment |
 
-**Good traits:** affects you personally, seems small (less competition), no great tool exists yet.
+### Design & Assets
 
----
+| Tool | URL | Purpose |
+|------|-----|---------|
+| Vercel Design MD | https://getdesign.md/vercel/design-md | AI design system |
+| logofast | https://logofa.st | Logo and favicon generator |
+| Real Favicon Generator | https://realfavicongenerator.net | Favicon all sizes |
+| Coolors | https://coolors.co | Color palette generator |
+| Google Fonts | https://fonts.google.com | Web fonts |
 
-## Step 2: Keyword Research with Ahrefs
+### Analytics & Monitoring
 
-- [ ] Go to [Ahrefs Free Keyword Generator](https://ahrefs.com/keyword-generator)
-- [ ] Use [Ahrefs Traffic Checker](https://ahrefs.com/traffic-checker) to spy on competitor traffic numbers
-- [ ] Enter your main keyword — check monthly search volume (even 1,000 US searches is enough)
-- [ ] Go to **Questions tab** → copy all FAQs (these become your FAQ section)
-- [ ] Check **Related terms tab** for supporting keywords
-- [ ] Type your keyword in Google + Space — use autocomplete suggestions as additional keywords
-- [ ] Target US-English phrasing for higher AdSense CPM
+| Tool | URL | Purpose |
+|------|-----|---------|
+| Google Analytics | https://analytics.google.com | Traffic analytics |
+| Plausible | https://plausible.com | Privacy-friendly analytics |
+| Sentry | https://sentry.io | Error tracking |
+| Betterstack | https://betterstack.com | Uptime monitoring |
+| Lighthouse | Built into Chrome | Performance auditing |
 
----
+### Development Tools
 
-## Step 3: Choose Your Domain Name
-
-- [ ] **.com only** — no exceptions
-- [ ] Primary keyword must be in the domain
-- [ ] Short, no hyphens
-- [ ] Use [Instant Domain Search](https://instantdomainsearch.com) to find available .com
-- [ ] **Do NOT buy domain yet** — write code first, confirm it works, then buy
-
----
-
-## Step 4: Setup Dev Environment
-
-- [ ] Install [Git](https://git-scm.com/) — [MacOS](https://tothe.app/JjR7GHy) | [Windows](https://tothe.app/QqAHA29)
-- [ ] Install [VS Code](https://code.visualstudio.com/) — [MacOS](https://tothe.app/alsATnI) | [Windows](https://tothe.app/KxjAunQ)
-- [ ] Install [Node.js](https://nodejs.org/) — [MacOS](https://tothe.app/bfUq5kQ) | [Windows](https://tothe.app/ginvdkk)
-- [ ] Install an AI coding tool ([Claude Code](https://tothe.app/kjob1WE) / Cursor AI free tier / Gemini CLI)
-- [ ] Create project folder named after your domain (e.g., `realonlineruler.com`)
-- [ ] Open folder in VS Code → open terminal
+| Tool | URL | Purpose |
+|------|-----|---------|
+| Git | https://git-scm.com | Version control |
+| VS Code | https://code.visualstudio.com | Editor |
+| Node.js | https://nodejs.org | JavaScript runtime |
+| GitHub | https://github.com | Repository hosting |
+| Postman | https://www.postman.com | API testing |
+| DB Browser for SQLite | https://sqlitebrowser.org | Database GUI |
 
 ---
 
-## Step 5: Build the Website with AI
+## AI Coding Tool Setup
 
-### 5.1 Install AstroJS
+### OpenCode
+
+- Install: https://opencode.ai
+- Works with any stack
+- Load skills from `.config/opencode/skills/` or `.agents/skills/`
+- MCP servers configured in `opencode.json`
+
+### Claude Code
+
+- Install: `npm install -g @anthropic-ai/claude-code`
+- Run: `claude` in your project directory
+- Use `/clear` between features to reset context
+- Skills loaded via `npx skills add`
+
+### Cursor
+
+- Download: https://cursor.sh
+- VS Code fork with built-in AI
+- Use `.cursorrules` for project-specific instructions
+- Composer mode for multi-file edits
+
+### GitHub Copilot
+
+- Install via VS Code extension
+- Use `#file` to reference files in prompts
+- Tab completion for inline suggestions
+
+---
+
+## Framework-Specific MCP Servers
+
+### Astro
 
 ```bash
-npm create astro@latest .
-```
-
-- Press Enter for all defaults, choose **Basic** template, Yes to initialize Git
-
-### 5.2 Add Vercel's design.md
-
-```bash
-npx getdesign@latest add vercel
-```
-
-### 5.3 Install AI Skills
-
-```bash
-# Web Design Guidelines
-npx skills add https://github.com/vercel-labs/agent-skills --skill web-design-guidelines
-
-# Tailwind 4 Docs
-npx skills add https://github.com/lombiq/tailwind-agent-skills --skill tailwind-4-docs
-```
-
-### 5.4 Add Astro JS MCP Server
-
-- [ ] Search "Astro JS MCP" on Google → first link → copy install command → paste in VS Code terminal
-
-### 5.5 Write the Prompt (in Claude Code)
-
-```
-I have initialized a new AstroJS project. Use the astro-docs MCP, tailwind-4-docs skill,
-and web-design-guidelines skill. Also use @DESIGN.md. Keep the website design like Vercel.
-
-Name: [Your Tool Name]
-Domain: [yourdomain.com]
-
-Create a [describe your tool]. My competitor is [URL] — analyze it, identify its weaknesses,
-and build a better version. Use MPA (multi-page application) architecture for best SEO.
-```
-
-### 5.6 Review and Iterate
-
-- [ ] Run `npm run dev` → test everything in browser
-- [ ] For each issue: type `/clear` in Claude Code → describe the problem → let it fix
-- [ ] Add dark mode toggle
-- [ ] Test mobile responsiveness (Chrome DevTools → Inspect → mobile icon)
-- [ ] Keep iterating until clearly better than every page-1 competitor
-
----
-
-## Step 6: On-Page SEO
-
-Run this prompt in Claude Code after `/clear`:
-
-```
-Do the on-page SEO of this website for:
-Main Keyword: [your keyword]
-Supporting Keywords: [comma-separated list from Ahrefs]
-
-Also add proper OG meta tags. Write 800 - 1200 words about the tool on the home page for SEO.
-```
-
-- [ ] `<title>` tag contains primary keyword
-- [ ] `<meta description>` under 160 characters with keyword
-- [ ] All images have descriptive `alt` attributes
-- [ ] Clean URLs (e.g., `/online-ruler` not `/page?id=123`)
-
----
-
-## Step 7: Add FAQ Section
-
-- [ ] Paste questions from Ahrefs "Questions" tab and Google "People Also Ask"
-- [ ] Use JSON-LD structured data for rich results in Google
-
-Prompt:
-
-```
-Add an SEO-friendly FAQ section using JSON-LD structured data for these questions:
-[paste your questions]
-
-NOTE: Use JSON-LD for FAQ SEO
-```
-
-JSON-LD Example:
-
-```html
-<script type="application/ld+json">
+# Search "Astro MCP server" → copy install command
+# Or add manually to your MCP config:
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "How to find an apprenticeship?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "<p>We provide an official service to search through available apprenticeships. To get started, create an account here, specify the desired region, and your preferences. You will be able to search through all officially registered open apprenticeships.</p>"
+  "mcpServers": {
+    "astro-docs": {
+      "command": "npx",
+      "args": ["-y", "@anthropic-ai/mcp-server-astro"]
     }
-  }, {
-    "@type": "Question",
-    "name": "Whom to contact?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "You can contact the apprenticeship office through our official phone hotline above, or with the web-form below. We generally respond to written requests within 7-10 days."
-    }
-  }]
+  }
 }
-</script>
 ```
 
----
-
-## Step 8: Required Pages for AdSense Approval
-
-Prompt:
-
-```
-Create these pages as separate MPA routes for best SEO:
-- Privacy Policy
-- Terms & Conditions
-- About Us
-- Contact Us
-
-Make these pages visible and linked in the home page footer and header.
-```
-
-- [ ] Privacy Policy page
-- [ ] Terms & Conditions page
-- [ ] About Us page
-- [ ] Contact Us page
-- [ ] All linked in header and footer
-- [ ] Add `robots.txt` with sitemap link
-- [ ] Generate `sitemap.xml` with all page URLs
-- [ ] Add error pages (404, 500)
-- [ ] Add Google Analytics tracking code
-
----
-
-## Step 9: Deploy to Cloudflare
-
-### Is my website static or dynamic?
-
-Ask Claude Code: *"this website is static or not? and should i deploy it in cloudflare pages or workers?"*
-
-### Cloudflare Pages (for static sites)
+### Next.js
 
 ```bash
-npx wrangler login
+# Check Vercel's MCP server for Next.js docs
+# Add to your MCP config
 ```
 
-Prompt:
+### General Pattern
+
+1. Search "[framework] MCP server"
+2. Find the official or community server
+3. Add to your MCP config (location depends on your AI tool)
+4. Test by asking a framework-specific question
+
+---
+
+## Common .gitignore Patterns
+
+### Node.js
 
 ```
-I have already loggedin to cloudflare wrangler, now deploy this astrojs website to
-cloudflare pages and take info from astro docs mcp if needed. Also add deploy script to package.json
+node_modules/
+.env
+.env.local
+.env.*.local
+dist/
+build/
+.next/
+.nuxt/
+.vercel/
+*.log
+.DS_Store
 ```
 
-- [ ] Run `npm run deploy` — site goes live at `*.pages.dev` instantly
-- [ ] Commit changes regularly via VS Code Source Control
-
-### Cloudflare Workers (for dynamic sites with backend logic)
+### Python
 
 ```
-I have already loggedin to cloudflare wrangler, now deploy this astrojs website to
-cloudflare workers and take info from astro docs mcp if needed. Also add deploy script to package.json
+__pycache__/
+*.py[cod]
+.env
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+```
+
+### Go
+
+```
+/bin/
+/vendor/
+.env
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+```
+
+### Rust
+
+```
+/target/
+.env
+*.swp
+*.swo
 ```
 
 ---
 
-## Step 10: Buy & Connect Your Domain
+## Security Headers Template
 
-- [ ] Buy .com domain from registrar (after code works and deploys)
-- [ ] Go to Cloudflare → Domains → Add Domain → select free plan
-- [ ] Delete all existing DNS records
-- [ ] Add A record: Name `@`, Value `8.8.8.8` (temporary)
-- [ ] Copy Cloudflare nameservers → update at your registrar
-- [ ] Wait 10–30 minutes for propagation
-- [ ] Workers & Pages → your project → Settings → Custom Domains → add domain → Activate
-- [ ] Repeat for `www` version
-
-### Disable pages.dev / workers.dev domains indexing
-
-**If deployed in CF Pages:**
-
-Add `_headers` file in `/public` folder:
+### Cloudflare `_headers` file
 
 ```
-https://project.pages.dev/*
-  X-Robots-Tag: noindex
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none';
+
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 ```
 
-**If deployed in CF Workers:**
+### Next.js `next.config.js`
 
-Just turn off workers domains after adding a custom domain in the workers settings.
+```js
+const securityHeaders = [
+  { key: 'X-Content-Type-Options', value: 'nosniff' },
+  { key: 'X-Frame-Options', value: 'DENY' },
+  { key: 'X-XSS-Protection', value: '1; mode=block' },
+  { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+  { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+  {
+    key: 'Content-Security-Policy',
+    value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'"
+  }
+];
 
-- [ ] Deploy again with `npm run deploy`
-- [ ] Verify `X-Robots-Tag: noindex` header appears on `.pages.dev` but NOT on `.com`
-
----
-
-## Step 11: Submit to Search Engines
-
-### Google Search Console
-
-- [ ] Go to [Google Search Console](https://search.google.com/search-console)
-- [ ] Add domain property
-- [ ] Verify via TXT DNS record in Cloudflare
-- [ ] Submit sitemap: `sitemap.xml`
-- [ ] URL Inspection → Request Indexing on homepage
-
-### Bing Webmaster Tools
-
-- [ ] Go to [Bing Webmaster Tools](https://www.bing.com/webmasters)
-- [ ] Sign in with Google → Import from Google Search Console
-- [ ] Submit URL for indexing
-
-### Promote
-
-- [ ] Post on Reddit in related subreddits
-- [ ] Answer questions on Quora with tool link
-- [ ] Share on social media
-- [ ] Send to friends and family
-
----
-
-## Step 12: Apply for Google AdSense
-
-- [ ] Wait until you have **10+ daily users** consistently (check Google Analytics Real-time)
-- [ ] Go to [ads.google.com](https://ads.google.com)
-- [ ] Add site → paste AdSense code snippet → deploy
-- [ ] Create and deploy `ads.txt` file
-- [ ] Click Request Review
-- [ ] Once approved, turn on **Auto Ads**
-
----
-
-## Bonus: Single Language Website Convert Prompt
-
-Use this to convert an English website to target a specific language/country.
-
-```
-website built using this: [YOUR_ENGLISH_WEBSITE_URL]
-
-this is my english website, convert this full website to rank on "[TARGET_KEYWORD]"
-and domain: [TARGET_DOMAIN], we want to rank in [TARGET_COUNTRY] and every
-[SPEAKING_LANGUAGE] countries.
-
-Add hreflang markup of [TARGET_LANGUAGE].
-
-NOTE: Do not just give a /lang pages, convert this whole website to a [TARGET_LANGUAGE]
-website only. we only want [TARGET_LANGUAGE] language no other languages.
-
-Change the full content of this website to rank on main keyword: [TARGET_KEYWORD]
-Supportive keywords:
-[keyword 1]
-[keyword 2]
-[keyword 3]
-[keyword 4]
-[keyword 5]
-```
-
-**Example — Portuguese (Brazil):**
-
-```
-website built using this: https://reguatamanhoreal.com/
-
-this is my english website, convert this full website to rank on "regua tamanho real"
-and domain: reguatamanhoreal.com, we want to rank in brazil and every portuguese countries.
-
-Add hreflang markup of Portuguese.
-
-NOTE: Do not just give a /lang pages, convert this whole website to a portuguese
-website only. we only want portuguese language no other languages.
-
-Change the full content of this website to rank on main keyword: regua tamanho real
-Supportive keywords:
-régua online
-regua virtual
-fita metrica online
-régua tamanho real celular
-regua tamanho real online
-régua online anel
-régua online tamanho real
-régua online celular
-régua online gratis
+module.exports = {
+  headers: async () => [{ source: '/(.*)', headers: securityHeaders }]
+};
 ```
 
 ---
 
-## Bonus: Make Website Multi Language
+## CI/CD Template (GitHub Actions)
 
-Use this to add multi-language support to an existing site using Astro i18n.
+```yaml
+name: CI/CD
 
-```
-website built using this: [YOUR_WEBSITE_URL]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
-https://docs.astro.build/en/recipes/i18n/ use this to provide multi lang support
-to this website so that it ranks on other languages keywords.
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
 
-provide support for:
-Español
-日本語
-Français
-Deutsch
-Português
-한국어
-Italiano
-
-note: Add hreflang markup for each language.
-```
-
----
-
-## Example Prompts
-
-### Website Creation Prompt
-
-```
-I have initialized a new astrojs project, use astro docs mcp and tailwind-4-docs skill
-for creating the website. Also use @DESIGN.md file for the website design.
-
-Name: Font Finder AI
-Domain: fontfinderai.com
-
-Website Description:
-Create a font finder website that will have option to find fonts using image and the
-results should contain both paid and free fonts but user can filter only free fonts easily.
-
-My competitor website is fontdetector.org and it have some features which we need and
-we need to make a website better than it. Give me ideas how to make it better. go on to
-this website and check what exactly we need to make. Do not copy design or ui from that website.
-```
-
-### SEO Prompt
-
-```
-Do the On Page SEO of this Website for
-
-Main Keyword: Font Finder
-Supporting Keywords:
-font finder by image
-free font finder
-font finder from image free
-font finder free
-font finder from image
-ai font finder
-font finder upload image
-font finder by text
-google font finder
-what the font finder
-image font finder
-
-these above keywords, also use proper og meta tags for SEO
-on home page write 800 - 1200 words about the tool for SEO
-```
-
-### FAQ Section Prompt
-
-```
-add seo friendly FAQ section for these below questions:
-
-what the font finder
-Can Google identify a font?
-How can I identify a type of font?
-How to see which font is used?
-Can I use AI to identify a font?
-Is there a free font finder?
-How to match a font?
-Can I take a picture of a font and find it?
-Where can I find free fonts?
-How to find a specific text font?
-How do I use Google Fonts?
-How to identify a font in a PDF?
-Can I create a font using AI?
-
-NOTE: Use JSON-LD for FAQ SEO
+  deploy:
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm ci
+      - run: npm run build
+      # Add your deployment step here
 ```
 
 ---
 
-## Timeline
+## .env.example Template
 
-| When | What Happens |
-|------|-------------|
-| Month 1–3 | Site live, Google crawling, rankings low. Keep building more tools. |
-| Month 4–6 | Rankings climb if SEO is solid. First meaningful traffic. |
-| Month 6+ | 10+ daily users → apply for AdSense. First earnings appear. |
-| Year 1 | 12 tools live, 1–3 driving organic traffic. Passive income begins. |
-| Year 2 | 24 tools. Compounding effect. Revenue scales with traffic. |
+```bash
+# ============================================
+# Environment Variables
+# Copy this to .env.local and fill in values
+# ============================================
+
+# Database
+DATABASE_URL=
+
+# Authentication
+AUTH_SECRET=
+OAUTH_GOOGLE_ID=
+OAUTH_GOOGLE_SECRET=
+
+# API Keys
+API_KEY=
+
+# App Configuration
+NODE_ENV=development
+PORT=3000
+APP_URL=http://localhost:3000
+
+# Email (if applicable)
+SMTP_HOST=
+SMTP_PORT=
+SMTP_USER=
+SMTP_PASS=
+
+# Storage (if applicable)
+S3_BUCKET=
+S3_REGION=
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY
+
+# Analytics
+GA_MEASUREMENT_ID=
+```
 
 ---
 
-## Buying Domains
+## EditorConfig Template
 
-| Registrar | Link | Notes |
-|-----------|------|-------|
-| Namecheap | [Buy](https://namecheap.pxf.io/c/7622160/386170/5618) | Card required |
-| Spaceship | [Buy](https://spaceship.sjv.io/c/7622160/1794549/21274) | Supports channel |
-| BigRock | [Buy](https://www.bigrock.in/) | UPI supported (~₹883/yr) |
-| GoDaddy | [Buy](https://www.godaddy.com/en-in) | UPI supported |
-| Hostinger | [Buy](https://www.hostinger.com/in) | UPI supported (~₹904/yr) |
+```ini
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab
+```
 
 ---
 
-## All Links
+## Quick Reference Links
 
-### Tools
-- [Logo & Favicon](https://logofa.st/)
-- [Ahrefs Keyword Generator](https://ahrefs.com/keyword-generator)
-- [Ahrefs Traffic Checker](https://ahrefs.com/traffic-checker)
-- [Instant Domain Search](https://instantdomainsearch.com/)
-- [Google Analytics](https://analytics.google.com)
+| Need | Go To |
+|------|-------|
+| Find a domain | https://instantdomainsearch.com |
+| Keyword research | https://ahrefs.com/keyword-generator |
+| Competitor traffic | https://ahrefs.com/traffic-checker |
+| Deploy to Cloudflare | https://dash.cloudflare.com |
+| Deploy to Vercel | https://vercel.com |
+| Google Analytics | https://analytics.google.com |
+| Google Search Console | https://search.google.com/search-console |
+| Bing Webmasters | https://www.bing.com/webmasters |
+| Sentry error tracking | https://sentry.io |
+| Lighthouse audit | Chrome DevTools → Lighthouse tab |
+| Design inspiration | https://dribbble.com / https://mobbin.com |
+| Accessibility check | https://wave.webaim.org |
 
-### Design & AI Skills
-- [Vercel Design MD](https://getdesign.md/vercel/design-md) — `npx getdesign@latest add vercel`
-- [Web Design Guidelines Skill](https://www.skills.sh/vercel-labs/agent-skills/web-design-guidelines)
-- [Tailwind v4 Docs](https://www.skills.sh/lombiq/tailwind-agent-skills/tailwind-4-docs) | [GitHub](https://github.com/Lombiq/Tailwind-Agent-Skills)
+---
 
-### AstroJS
-- [AstroJS Docs](https://docs.astro.build/en/getting-started/)
-- [AstroJS Cloudflare Deploy](https://docs.astro.build/en/guides/deploy/cloudflare/)
-- [AstroJS MCP Server](https://docs.astro.build/en/guides/build-with-ai/#astro-docs-mcp-server)
-- [AstroJS i18n Recipe](https://docs.astro.build/en/recipes/i18n/)
+## Reference
 
-### Cloudflare
-- [Cloudflare Dashboard](https://dash.cloudflare.com/login)
-
-### SEO & Search Engines
-- [Google Search Console](https://search.google.com/search-console/about)
-- [Bing Webmaster](https://www.bing.com/webmasters/about)
-- [Google AdSense](https://adsense.google.com/start/)
-
-### More from CompileFuture
-- [Rejected By IIT. Now Making 50 LPA From My Own AI Business.](https://compilefuture.com/blog/making-50-lpa-from-my-own-ai-business/)
+- [README](README.md) (overview)
+- [Guide 1 — Step by Step](Guide%201.md) (full checklist)
+- [Guide 2 — Prompts & Resources](Guide%202.md) (this file)
