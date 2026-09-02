@@ -1,5 +1,7 @@
 # Micro-Tool Website Builder — Earn with AI
 
+Last Updated: September 2, 2026
+
 A complete checklist to build, deploy, and monetize micro-tool websites using AI.
 
 **The model:** Build one small, focused web tool per month → rank on Google → earn passive income via Google AdSense. Cost: ~₹1,000/year (domain only). Hosting is free on Cloudflare.
